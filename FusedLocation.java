@@ -257,6 +257,7 @@ public class FusedLocation implements ConnectionCallbacks, OnConnectionFailedLis
         numTries = 0;
         mCurrentLocation = null;
         inProgress = false;
+        lastKnownLocation = false;
         mGoogleApiClient.disconnect();
     }
 
