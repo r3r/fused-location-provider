@@ -222,6 +222,9 @@ public class FusedLocation implements ConnectionCallbacks, OnConnectionFailedLis
      * On pressing Settings button will lauch Settings Options
      */
     public void showSettingsAlert() {
+        if(!(mContext instanceof Activity)){
+            return; //only show dialog if called from activity.
+        }
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
 
         // Setting Dialog Title
