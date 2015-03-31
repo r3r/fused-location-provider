@@ -8,7 +8,7 @@ This interface is not tied to an activity nor a service, and hence can be includ
 
 
 ##Features
-* Self-contained - can be used by any activity or service. Just include the file and call the functions.
+* Self-contained & Simple Integration - can be used by any activity or service. Just include the file and call the functions.
 * Callback interface - simply implement the Callback interface and define the method `onLocationResult(Location)` to process the location data.
 * **`getLastKnownLocation(long diffTime, int minAccuracy)`** - Try to use the FusedLocationAPI's lastKnownLocation if it meets the criteria specified by diffTime(the max time that may have elapsed since the sampling of lastKnownLocation) and minAccuracy (the minimum # of meters that the lastKnownLocation needs to be accurate to). Otherwise, it tries to sample a new location and delivers that instead.
 * **`getCurrentLocation(int maxTries)`** - Sample GPS maxTries times and deliver the location with the best accuracy.
