@@ -189,7 +189,7 @@ public class FusedLocation implements ConnectionCallbacks, OnConnectionFailedLis
         //
         if (lastKnownLocation) {
             mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-            if ((mCurrentLocation.getTime() - Calendar.getInstance().getTime().getTime()) < diffTime
+            if (mCurrentLocation != null && (mCurrentLocation.getTime() - Calendar.getInstance().getTime().getTime()) < diffTime
                     && mCurrentLocation.getAccuracy() <= minAccuracy) {
                 mCallback.onLocationResult(mCurrentLocation);
                 reset();
