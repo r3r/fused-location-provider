@@ -28,7 +28,7 @@ This interface is not tied to an activity nor a service, and hence can be includ
 #### Setting up the FusedLocaiton Object
 ```java
 FusedLocation fusedLocation = new FusedLocation(context, new FusedLocation.Callback(){
-                      @override
+                      @Override
                       public void onLocationResult(Location location){
                             //Do as you wish with location here
                             Toast.makeText(context, 
